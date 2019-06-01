@@ -1,0 +1,57 @@
+<html>
+        <head>
+                <link rel="stylesheet" type="text/css" href="/static/style.css">
+            </head>
+    <body>
+        <table class="mainTable">
+            <tr>
+                <td>
+                    <table>
+                        <tr>
+                            <td>
+                                <h2>Private Messages</h2>
+                              <form action='/privateChat' method='POST' enctype='multipart/form-data'>
+                                <div>Input username</div>
+                                <input type='text' name ='receiver'>
+                                <div>Input your message</div>
+                                <input type='text' name='privateMessage'><br>
+                                <input type='submit' value='Send message'>
+                              </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                             <h2>Messages</h2>
+                             <ul id="privateMessageList"></ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <h2>Main Chat</h2>
+        <ul id="messageList"></ul>
+        <form action='/messages' method='POST' enctype='multipart/form-data'>
+            <input type='text' name=newMessage>
+            <input type='submit'>
+        </form>
+        <form action='/changeUsername' method='POST' enctype='multipart/form-data'>
+            <div>Input a new username</div>
+            <input type='text' name='newUsername'>
+            <input type='submit' value='Change username'>
+        </form>
+        <form action='/pink' method='POST' enctype='multipart/form-data'>
+            <input type='submit' value='Pink'>
+        </form>
+        <form action='/red' method='POST' enctype='multipart/form-data'>
+            <input type='submit' value='Red'>
+        </form>
+        <form action='/black' method='POST' enctype='multipart/form-data'>
+            <input type='submit' value='Black'>
+        </form>
+    </td>
+    <td class="usersList"> <div>List of active users:</div> <div id="usersList"> </div> </td>
+    </tr>
+</table>
+        <script src='/static/app.js'></script>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+.pink{
+    color: pink;
+}
+
+.black{
+    color: black
+}
+.red {
+    color: red
+}
+
+.mainTable {
+    width: 100%;
+}
+
+.usersList {
+    text-align: right;
+    vertical-align: top;
+}
